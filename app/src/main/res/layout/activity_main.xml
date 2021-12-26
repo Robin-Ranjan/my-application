@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTintMode="screen"
+    android:elevation="2dp"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="@color/purple_200"
+       android:elevation="4dp"
+       android:theme="?attr/actionBarTheme"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+
+       app:navigationIcon="@drawable/ic_baseline_menu_24" />
+
+   <LinearLayout
+       android:layout_width="380dp"
+       android:layout_height="226dp"
+       android:layout_margin="10dp"
+       android:orientation="horizontal"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+      <androidx.cardview.widget.CardView
+          android:id="@+id/c1"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_margin="10dp"
+          android:layout_weight="1"
+          android:onClick="itr"
+          android:padding="10dp"
+          tools:ignore="OnClick">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="112dp"
+                android:layout_height="52dp"
+                android:layout_below="@id/imageView3"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="7dp"
+                android:gravity="center"
+                android:text="@string/it"
+                android:textColor="#5A0808"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="110dp"
+                android:layout_height="106dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="30dp"
+                app:srcCompat="@drawable/insta" />
+         </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_margin="10dp"
+          android:layout_weight="1" />
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
